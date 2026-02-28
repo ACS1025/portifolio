@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <title>Eliane Silva | Estratégia e Gestão Cultural em Hortolândia</title>
 
@@ -14,7 +15,7 @@
   <meta property="og:description" content="Projetos culturais estruturados para fortalecer identidade, memória histórica e acesso à cultura em Hortolândia.">
   <meta property="og:type" content="website">
 
-  <link rel="icon" type="image/x-icon" href="src/icon/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="src/ES_Logo.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -26,8 +27,10 @@
 
 <header class="header">
   <div class="container header-inner">
+    
     <div class="brand">Eliane Silva</div>
 
+    <!-- Menu Desktop -->
     <nav class="nav">
       <a href="#home">Home</a>
       <a href="#metodo">Método</a>
@@ -35,8 +38,43 @@
       <a href="#experiencia">Experiência</a>
       <a href="#contato" class="nav-cta">Contato</a>
     </nav>
+
+    <!-- Redes Sociais -->
+    <div class="social-header">
+      <a href="https://www.linkedin.com/in/eliane-silva-19a24b40/"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="LinkedIn Eliane Silva">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+
+      <a href="https://www.instagram.com/e.l.i.a.n.e_s.i.l.v.a/"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="Instagram Eliane Silva">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+
+    <!-- Botão Hamburger -->
+    <button id="mobileMenuToggle"
+            class="hamburger"
+            aria-label="Abrir menu"
+            aria-expanded="false">
+      <i class="fas fa-bars"></i>
+    </button>
+
   </div>
 </header>
+
+<!-- Menu Mobile -->
+<nav id="mobileNav" class="mobile-nav" aria-hidden="true">
+  <a href="#home">Home</a>
+  <a href="#metodo">Método</a>
+  <a href="#atuacao">Atuação</a>
+  <a href="#experiencia">Experiência</a>
+  <a href="#contato">Contato</a>
+</nav>
 
 <main id="home">
 
