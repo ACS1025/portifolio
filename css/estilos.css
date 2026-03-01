@@ -4,18 +4,16 @@ html {
 }
 
 body {
-    background-image: url('../imagens/Portifolio');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    /* removed background to avoid full-page image; hero handles the graphic */
+    background-color: #000;
     font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
     margin: 0 auto;
-    max-width: 1290px;
+    max-width: 1290px;  
 }
 
-.cabecalho {    
+.cabecalho {
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -210,20 +210,23 @@ body {
 
 .hero {
   position: relative;
-  background-image: url("src/ACS0.0.svg");
+  /* specific hero image */
+  background-image: url("src/PortifolioES.svg");
   background-size: cover;
   background-position: center;
   color: var(--text-light);
   padding: 7rem 0 6rem;
+  min-height: 100vh;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
+  /* overlay dimmed but semi-transparent to reveal background image */
   background: linear-gradient(
     135deg,
-    rgba(11, 18, 32, 0.92),
-    rgba(17, 24, 39, 0.85)
+    rgba(11, 18, 32, 0.6),
+    rgba(17, 24, 39, 0.5)
   );
   z-index: 1;
 }
