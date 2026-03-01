@@ -220,15 +220,8 @@ body {
 }
 
 .hero-overlay {
-  position: absolute;
-  inset: 0;
-  /* overlay dimmed but semi-transparent to reveal background image */
-  background: linear-gradient(
-    135deg,
-    rgba(11, 18, 32, 0.6),
-    rgba(17, 24, 39, 0.5)
-  );
-  z-index: 1;
+  /* overlay removed to let background show fully */
+  display: none;
 }
 
 .hero .container {
@@ -245,12 +238,16 @@ body {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1.6rem;
+  color: #fff; /* changed to white */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.75),
+               0 0 20px rgba(255,255,255,0.3); /* subtle light sheen */
 }
 
 .hero p {
   font-size: 1.1rem;
-  color: #c7d2fe;
+  color: #fff; /* changed to white */
   margin-bottom: 2.4rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
 }
 
 /* =============================
