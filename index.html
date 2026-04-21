@@ -1,233 +1,356 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  
-  <title>Eliane Silva | Estratégia e Gestão Cultural em Hortolândia</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <meta name="description" content="Eliane Silva atua na Secretaria de Cultura de Hortolândia desenvolvendo projetos culturais com foco em identidade local, valorização de artistas, preservação da memória histórica e democratização do acesso à arte.">
+<title>Eliane Silva | Gestão Cultural Estratégica e Transformação Social</title>
 
-  <meta name="keywords" content="projetos culturais, política cultural municipal, gestão cultural, Hortolândia, identidade cultural, valorização de artistas, memória histórica">
+<meta name="description" content="Eliane Silva atua com gestão cultural estratégica, articulação institucional e desenvolvimento de projetos públicos de impacto social em Hortolândia e região.">
 
-  <meta property="og:title" content="Eliane Silva | Estratégia e Gestão Cultural">
-  <meta property="og:description" content="Projetos culturais estruturados para fortalecer identidade, memória histórica e acesso à cultura em Hortolândia.">
-  <meta property="og:type" content="website">
+<style>
+:root{
+--dark-bg:#0b1220;
+--light-bg:#f8fafc;
+--white:#ffffff;
+--text-dark:#0f172a;
+--text-light:#e5e7eb;
+--text-muted:#64748b;
+--accent:#0f4c81;
+--border:#e5e7eb;
+}
 
-  <link rel="icon" type="image/x-icon" href="src/ES_Logo.ico">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+*{margin:0;padding:0;box-sizing:border-box;}
 
-  <link rel="stylesheet" href="style.css">
-  <!-- additional custom rules -->
-  <link rel="stylesheet" href="css/estilos.css">
+body{
+font-family:"Inter",sans-serif;
+background:var(--light-bg);
+color:var(--text-dark);
+line-height:1.7;
+}
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-13204126499"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-13204126499');
-  </script>
+.container{
+max-width:1120px;
+margin:auto;
+padding:0 1.5rem;
+}
+
+.header{
+background:#fff;
+border-bottom:1px solid var(--border);
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.header-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+height:74px;
+}
+
+.brand{
+font-weight:800;
+font-size:1.08rem;
+}
+
+.nav a{
+text-decoration:none;
+margin-left:1.6rem;
+color:var(--text-dark);
+font-weight:600;
+font-size:.95rem;
+}
+
+.nav-cta{
+border:1px solid var(--accent);
+padding:.45rem .9rem;
+border-radius:7px;
+}
+
+.hero{
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url("src/PortifolioES.svg") center/cover no-repeat;
+min-height:82vh;
+display:flex;
+align-items:center;
+color:#fff;
+padding:6rem 0;
+}
+
+.hero h1{
+font-size:3rem;
+line-height:1.15;
+max-width:760px;
+margin-bottom:1.4rem;
+font-weight:800;
+}
+
+.hero p{
+font-size:1.15rem;
+max-width:720px;
+margin-bottom:2rem;
+color:#f1f5f9;
+}
+
+.btn-primary{
+display:inline-block;
+background:var(--accent);
+color:#fff;
+padding:14px 28px;
+border-radius:8px;
+text-decoration:none;
+font-weight:700;
+}
+
+.section{
+padding:5.5rem 0;
+}
+
+.section h2{
+font-size:2rem;
+margin-bottom:1.2rem;
+}
+
+.section p{
+color:var(--text-muted);
+margin-bottom:1rem;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:1.2rem;
+margin-top:2rem;
+}
+
+.card{
+background:#fff;
+border:1px solid var(--border);
+border-radius:14px;
+padding:1.5rem;
+}
+
+.card strong{
+display:block;
+font-size:1.8rem;
+margin-bottom:.4rem;
+color:var(--accent);
+}
+
+.lista{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:1.2rem;
+margin-top:1.8rem;
+}
+
+.item{
+background:#fff;
+padding:1.5rem;
+border-radius:14px;
+border:1px solid var(--border);
+}
+
+.footer{
+background:var(--dark-bg);
+color:#fff;
+padding:2.5rem 0;
+text-align:center;
+}
+
+.whatsapp-float{
+position:fixed;
+right:24px;
+bottom:24px;
+background:#25d366;
+color:#fff;
+padding:.8rem 1rem;
+border-radius:999px;
+text-decoration:none;
+font-weight:700;
+z-index:999;
+}
+
+@media(max-width:768px){
+.nav{display:none;}
+.hero h1{font-size:2.1rem;}
+.hero p{font-size:1rem;}
+}
+</style>
 </head>
 
 <body>
 
 <header class="header">
-  <div class="container header-inner">
-    
-    <div class="brand">Eliane Silva</div>
+<div class="container header-inner">
 
-    <!-- Menu Desktop -->
-    <nav class="nav">
-      <a href="#home">Home</a>
-      <a href="#metodo">Método</a>
-      <a href="#atuacao">Atuação</a>
-      <a href="#experiencia">Experiência</a>
-      <a href="#contato" class="nav-cta">Contato</a>
-    </nav>
+<div class="brand">Eliane Silva</div>
 
-    <!-- Redes Sociais -->
-    <div class="social-header">
-      <a href="https://www.linkedin.com/in/eliane-silva-19a24b40/"
-         target="_blank"
-         rel="noopener noreferrer"
-         aria-label="LinkedIn Eliane Silva">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-
-      <a href="https://www.instagram.com/e.l.i.a.n.e_s.i.l.v.a/"
-         target="_blank"
-         rel="noopener noreferrer"
-         aria-label="Instagram Eliane Silva">
-        <i class="fab fa-instagram"></i>
-      </a>
-
-      <a href="https://wwws.cnpq.br/cvlattesweb/PKG_MENU.menu?f_cod=B89A095BC3CD57BEFEC6D745C434F70F"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="Currículo Lattes Eliane Silva">
-  <i class="fas fa-graduation-cap"></i>
-</a>
-    </div>
-
-    <!-- Botão Hamburger -->
-    <button id="mobileMenuToggle"
-            class="hamburger"
-            aria-label="Abrir menu"
-            aria-expanded="false">
-      <i class="fas fa-bars"></i>
-    </button>
-
-  </div>
-</header>
-
-<!-- Menu Mobile -->
-<nav id="mobileNav" class="mobile-nav" aria-hidden="true">
-  <a href="#home">Home</a>
-  <a href="#metodo">Método</a>
-  <a href="#atuacao">Atuação</a>
-  <a href="#experiencia">Experiência</a>
-  <a href="#contato">Contato</a>
+<nav class="nav">
+<a href="#sobre">Sobre</a>
+<a href="#resultados">Resultados</a>
+<a href="#projetos">Projetos</a>
+<a href="#atuacao">Atuação</a>
+<a href="#contato" class="nav-cta">Contato</a>
 </nav>
 
-<main id="home">
+</div>
+</header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="container">
-      <div class="hero-content">
-        <h1>Estratégia e Gestão Cultural</h1>
-        <p>Projetos estruturados para fortalecer identidade, memória histórica e acesso à cultura em Hortolândia</p>
-        <a href="#contato" class="btn-primary">
-          Conversar sobre um projeto
-        </a>
-      </div>
-    </div>
-  </section>
+<main>
 
-  <!-- POSICIONAMENTO -->
-  <section class="section apoio">
-    <div class="container">
-      <p>
-        <strong>Desenvolvo e lidero projetos culturais em Hortolândia com foco no fortalecimento da identidade local, valorização dos artistas e democratização do acesso à arte. Minha atuação integra planejamento estratégico, impacto social e preservação da memória histórica.</strong>
-      </p>
-    </div>
-  </section>
+<section class="hero">
+<div class="container">
 
-  <!-- COMO ATUO -->
-  <section class="section metodo" id="metodo">
-    <div class="container">
-      <h2>Como atuo</h2>
+<h1>Gestão Cultural Estratégica que transforma territórios</h1>
 
-      <p>
-        Atuo na construção e no fortalecimento da identidade cultural de Hortolândia, idealizando e executando projetos que impulsionam a vida artística do município.
-      </p>
+<p>
+Atuação pública orientada por resultados, impacto social e fortalecimento da identidade local.
+Projetos que conectam cultura, educação, juventude e comunidade em Hortolândia e região.
+</p>
 
-      <p>
-        Desenvolvo ações que contemplam múltiplas linguagens — das artes visuais à música, da literatura às manifestações populares — com o compromisso de preservar a memória histórica local.
-      </p>
+<a href="#contato" class="btn-primary">
+Conversar sobre parceria
+</a>
 
-      <p>
-        Minha prática é fundamentada em planejamento estratégico, responsabilidade social e geração de impacto cultural consistente.
-      </p>
+</div>
+</section>
 
-      <p>
-        Amplio o acesso da população às experiências culturais, valorizo artistas locais e estimulo conexões entre diferentes públicos e expressões culturais.
-      </p>
+<section class="section" id="sobre">
+<div class="container">
 
-    </div>
-  </section>
+<h2>Quem é Eliane Silva</h2>
 
-  <!-- ÁREAS DE ATUAÇÃO -->
-  <section class="section atuacao" id="atuacao">
-    <div class="container">
-      <h2>Áreas de atuação</h2>
+<p>
+Profissional com experiência em articulação institucional, desenvolvimento de projetos culturais
+e construção de ações públicas de alcance comunitário.
+</p>
 
-      <ul class="atuacao-lista">
-        <li>Desenvolvimento de projetos culturais municipais</li>
-        <li>Estruturação de políticas culturais</li>
-        <li>Valorização e fomento a artistas locais</li>
-        <li>Programas de democratização do acesso à arte</li>
-        <li>Preservação da memória cultural e histórica</li>
-      </ul>
-    </div>
-  </section>
+<p>
+Sua atuação integra planejamento, mobilização social, valorização de talentos locais
+e fortalecimento da cultura como instrumento de transformação.
+</p>
 
-  <!-- EXPERIÊNCIA -->
-  <section class="section experiencia" id="experiencia">
-    <div class="container">
-      <h2>Experiência construída na prática</h2>
+</div>
+</section>
 
-      <p>
-        Atuação direta na Secretaria de Cultura de Hortolândia com desenvolvimento e execução de projetos culturais.
-      </p>
+<section class="section" id="resultados" style="background:#fff;">
+<div class="container">
 
-      <p>
-        Experiência na articulação entre poder público, artistas e comunidade.
-      </p>
+<h2>Resultados e Impacto</h2>
 
-      <p>
-        Construção de iniciativas com impacto social e fortalecimento da identidade local.
-      </p>
-    </div>
-  </section>
+<div class="grid">
 
-  <!-- CONTATO -->
-  <section class="section contato" id="contato">
-    <div class="container contato-box">
-      <h2>Vamos conversar sobre o seu contexto</h2>
+<div class="card">
+<strong>+3 mil</strong>
+Pessoas impactadas em ações culturais e educativas.
+</div>
 
-      <p>
-        Quero conhecer sua realidade, suas ideias e os desafios culturais da sua comunidade para transformar necessidades em projetos estruturados, acessíveis e com impacto real.
-      </p>
+<div class="card">
+<strong>Escolas</strong>
+Projetos desenvolvidos em ambientes escolares e territórios formativos.
+</div>
 
-      <p>
-        Se você busca fortalecer identidade, valorizar talentos ou ampliar o acesso à arte em Hortolândia, estou pronta para construir soluções culturais que façam sentido para o seu público.
-      </p>
+<div class="card">
+<strong>Gestão</strong>
+Experiência em articulação entre poder público, comunidade e agentes culturais.
+</div>
 
-      <a href="https://wa.me/5519997172441?text=Olá,%20gostaria%20de%20conversar%20sobre%20um%20projeto%20cultural."
-         class="btn-primary"
-         target="_blank"
-         rel="noopener noreferrer">
-        Conversar sobre um possível projeto
-      </a>
-    </div>
-  </section>
+<div class="card">
+<strong>Identidade</strong>
+Fortalecimento da memória local e pertencimento comunitário.
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="section" id="projetos">
+<div class="container">
+
+<h2>Projetos Estratégicos</h2>
+
+<div class="lista">
+
+<div class="item">
+<h3>Hip Hop nas Escolas</h3>
+<p>Cultura urbana aplicada à educação, protagonismo juvenil e pertencimento.</p>
+</div>
+
+<div class="item">
+<h3>Mariazinha</h3>
+<p>Arte e fortalecimento feminino por meio de experiências culturais transformadoras.</p>
+</div>
+
+<div class="item">
+<h3>Território de Cultura</h3>
+<p>Integração entre escola, comunidade e políticas públicas culturais.</p>
+</div>
+
+<div class="item">
+<h3>Formações Técnicas</h3>
+<p>Qualificação de equipes, indicadores e melhoria da gestão cultural.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="section" id="atuacao" style="background:#fff;">
+<div class="container">
+
+<h2>Áreas de Atuação</h2>
+
+<div class="lista">
+
+<div class="item">Gestão Cultural e Políticas Públicas</div>
+<div class="item">Projetos Educacionais e Territoriais</div>
+<div class="item">Articulação Institucional</div>
+<div class="item">Produção Cultural</div>
+<div class="item">Formação de Equipes</div>
+<div class="item">Impacto Social e Participação Comunitária</div>
+
+</div>
+</div>
+</section>
+
+<section class="section" id="contato">
+<div class="container" style="text-align:center;">
+
+<h2>Vamos construir algo relevante?</h2>
+
+<p style="max-width:720px;margin:0 auto 2rem;">
+Disponível para parcerias com escolas, municípios, instituições,
+coletivos e organizações que desejam transformar realidades por meio da cultura.
+</p>
+
+<a href="https://wa.me/5519997172441" class="btn-primary" target="_blank">
+Falar no WhatsApp
+</a>
+
+</div>
+</section>
 
 </main>
 
 <footer class="footer">
-  <div class="container footer-inner">
-    <p>
-      © 2026 Eliane Silva | Gestão Cultural em Hortolândia
-    </p>
+<div class="container">
 
-    <p class="dev-credit">
-      Desenvolvido por 
-      <a href="https://acs1025.github.io/ACS_CONSULTORIA/index.html#home" 
-         target="_blank" 
-         rel="noopener noreferrer">
-        <strong>ACS Consult</strong>
-      </a> 
-      | Inteligência de dados aplicada à decisão
-    </p>
-  </div>
+<p>© 2026 Eliane Silva</p>
+<p>Cultura • Gestão Pública • Impacto Social</p>
+<p style="opacity:.65;font-size:.85rem;margin-top:10px;">Desenvolvido por ACS Consultoria</p>
+
+</div>
 </footer>
 
-<a href="https://wa.me/5519997172441?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20projetos%20culturais."
-   class="whatsapp-float"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="Falar no WhatsApp">
-  <span class="whatsapp-text">Vamos conversar?</span>
+<a href="https://wa.me/5519997172441" class="whatsapp-float" target="_blank">
+<i class="fab fa-whatsapp"></i> Vamos conversar?
 </a>
-
-<script src="script.js"></script>
 
 </body>
 </html>
